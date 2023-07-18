@@ -1,0 +1,5 @@
+name: JoinCount
+version: 1.0.0
+api: 5.0.0
+author: antbag
+main: antbag\JoinCount\Main
