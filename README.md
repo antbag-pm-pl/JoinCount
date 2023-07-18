@@ -1,4 +1,4 @@
-https://poggit.pmmp.io/shield.state/JoinCount)](https://poggit.pmmp.io/p/JoinCount
+<a href="https://poggit.pmmp.io/p/JoinCount"><img src="https://poggit.pmmp.io/shield.state/JoinCount"></a>
 
 # JoinCount
 
