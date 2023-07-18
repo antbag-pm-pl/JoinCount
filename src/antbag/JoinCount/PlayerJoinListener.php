@@ -48,12 +48,4 @@ class PlayerJoinListener implements Listener {
         $encodedData = json_encode($data);
         file_put_contents($this->dataFile, $encodedData);
     }
-    
- private function sendToAllPlayers(string $message) {
-    $server = $this->getPlugin()->getServer();
-    $players = $server->getOnlinePlayers();
-    foreach ($players as $player) {
-        $player->sendMessage($message);
-    }
-}
 }
