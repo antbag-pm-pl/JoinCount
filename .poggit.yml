@@ -4,4 +4,5 @@ branches:
 - main
 projects: 
   JoinCount:
+    path: ""
 ...
