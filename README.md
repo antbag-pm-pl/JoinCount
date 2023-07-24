@@ -2,4 +2,4 @@
 
 # JoinCount
 
-[PMMP] [@pmmp]This is a pocketmine plugin which tells you that a player has first time joined and it’s number
+[PMMP] [@pmmp]This is a pocketmine plugin which tells you that a player has first time joined and it’s number through a file. It counts the player number and even displays it too
