@@ -10,6 +10,7 @@ use antbag\JoinCount\PlayerJoinListener;
 class Main extends PluginBase {
 
     public static $instance;
+    public Config $config;
     
     public function onEnable(): void {
         // Register event listener
