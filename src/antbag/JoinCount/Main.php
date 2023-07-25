@@ -5,6 +5,7 @@ namespace antbag\JoinCount;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\utils\Config;
+use antbag\JoinCount\PlayerJoinListener;
 
 class Main extends PluginBase {
 
