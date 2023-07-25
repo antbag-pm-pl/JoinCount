@@ -28,7 +28,7 @@ class PlayerJoinListener implements Listener {
 
             $totalPlayers = count($data);
 
-            $welcomeMessage = Main::getInstance()->$config->getNested("WelcomeMessage");
+            $welcomeMessage = Main::getInstance()->config->getNested("WelcomeMessage");
             $welcomeMessage = str_replace("{player}", $playerName, $welcomeMessage);
             $welcomeMessage = str_replace("{total_players}", $totalPlayers, $welcomeMessage);
             Server::getInstance()->broadcastMessage($welcomeMessage);
