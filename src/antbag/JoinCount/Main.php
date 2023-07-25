@@ -12,7 +12,7 @@ class Main extends PluginBase {
     
     public function onEnable(): void {
         // Register event listener
-        $config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+        $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
         $this->saveResource("config.yml");
         self::$instance = $this;
         $listener = new PlayerJoinListener($this->getDataFolder() . "playerData.json");
