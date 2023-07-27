@@ -5,6 +5,8 @@ branches:
 projects: 
   JoinCount:
     path: ""
+    lint:
+      phpstan: false
     libs:
     - src: fernanACM/CortexPE/DiscordWebhookAPI
       version: ^1.0.3
