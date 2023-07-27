@@ -17,7 +17,6 @@ class Main extends PluginBase {
         // Register event listener
         $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
         $this->saveResource("config.yml");
-        $webHook = new Webhook($url);
         $url = $this->config->getNested("DiscordURL");
         self::$instance = $this;
         $listener = new PlayerJoinListener($this->getDataFolder() . "playerData.json");

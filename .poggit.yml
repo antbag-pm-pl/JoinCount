@@ -5,4 +5,8 @@ branches:
 projects: 
   JoinCount:
     path: ""
+    libs:
+    - src: fernanACM/CortexPE/DiscordWebhookAPI
+      version: ^1.0.3
+      branch: PM5
 ...
