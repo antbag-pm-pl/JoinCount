@@ -8,7 +8,7 @@ projects:
     lint:
       phpstan: false
     libs:
-    - src: fernanACM/CortexPE/DiscordWebhookAPI
-      version: ^1.0.3
-      branch: PM5
+      - src: fernanACM/CortexPE/DiscordWebhookAPI
+        version: ^1.0.3
+        branch: PM5
 ...
