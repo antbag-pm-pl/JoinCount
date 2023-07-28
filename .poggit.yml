@@ -8,7 +8,7 @@ projects:
     lint:
       phpstan: false
     libs:
-      - src: src: ACM-PocketMine-MP/DiscordWebhookAPI/DiscordWebhookAPI
+      - src: ACM-PocketMine-MP/DiscordWebhookAPI/DiscordWebhookAPI
         version: ^1.0.3
         branch: PM5
 ...
