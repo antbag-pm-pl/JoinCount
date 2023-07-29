@@ -33,8 +33,8 @@ class PlayerJoinListener implements Listener {
             $totalPlayers = count($data);
 
             $welcomeMessage = Main::getInstance()->config->getNested("WelcomeMessage");
-            $welcomeMessage = str_replace("{player}", $playerName, "");
-            $welcomeMessage = str_replace("{total_players}", $totalPlayers, "");
+            $player = str_replace("{player}", $playerName, $player);
+            $totalplayer = str_replace("{total_players}", $totalPlayers, $totalplayer);
             Server::getInstance()->broadcastMessage($welcomeMessage);
             
             $webHook = new Webhook(Main::getInstance()->$url);
