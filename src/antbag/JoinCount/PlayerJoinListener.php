@@ -30,7 +30,7 @@ class PlayerJoinListener implements Listener {
 
             $totalPlayers = count($data);
 
-            $welcomeMessage = "§8Welcome,§c $playerName! §8You are the #§8 $totalPlayers §8player to join our server!"
+            $welcomeMessage = "§8Welcome,§c $playerName! §8You are the #§8 $totalPlayers §8player to join our server!";
             Server::getInstance()->broadcastMessage($welcomeMessage);
             
             
