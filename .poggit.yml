@@ -5,10 +5,8 @@ branches:
 projects: 
   JoinCount:
     path: ""
+    icon: 'group.png'
     lint:
       phpstan: false
-    libs:
-      - src: ACM-PocketMine-MP/DiscordWebhookAPI/DiscordWebhookAPI
-        version: ^1.0.3
-        branch: PM5
+    
 ...
