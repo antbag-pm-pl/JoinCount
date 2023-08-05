@@ -7,9 +7,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\Server;
 use antbag\JoinCount\Main;
 
-use CortexPE\DiscordWebhookAPI\Message;
-use CortexPE\DiscordWebhookAPI\Webhook;
-use CortexPE\DiscordWebhookAPI;
+
 
 class PlayerJoinListener implements Listener {
 
@@ -32,27 +30,10 @@ class PlayerJoinListener implements Listener {
 
             $totalPlayers = count($data);
 
-            $welcomeMessage = Main::getInstance()->config->getNested("WelcomeMessage");
-            $player = str_replace("{player}", $playerName, $player);
-            $totalplayer = str_replace("{total_players}", $totalPlayers, $totalplayer);
+            $welcomeMessage = 
             Server::getInstance()->broadcastMessage($welcomeMessage);
             
-            $webHook = new Webhook(Main::getInstance()->$url);
             
-            $msg = new Message();
-            
-            $msg->setUsername("JoinCount");
-            $msg->setAvatarURL("https://cortexpe.xyz/utils/kitsu.png");
-            
-            $embed = new Embed();
-            $embed->setTitle("New Player");
-            $embed->setColor(0x00FF00);
-            $embed->setAuthor("antbag");
-            $embed->setDescription($welcomeMessage);
-            $msg->addEmbed($embed);
-            
-            $webHook->send($msg);
-        }
     }
 
     private function loadData(): array {
