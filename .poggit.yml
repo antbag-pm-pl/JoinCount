@@ -7,6 +7,6 @@ projects:
     path: ""
     icon: 'group.png'
     lint:
-      phpstan: false
+      phpstan: true
     
 ...
