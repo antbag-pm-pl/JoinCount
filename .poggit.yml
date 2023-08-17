@@ -8,5 +8,5 @@ projects:
     icon: 'group.png'
     libs:
       - src: NhanAZ/libBedrock/libBedrock
-        version: 1.1.7
+        version: 1.1.9
 ...
