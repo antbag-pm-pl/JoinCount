@@ -1,0 +1,26 @@
+name: PHPStan
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name
+
+jobs:
+  phpstan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'  # Change to your desired PHP version
+
+    - name: Install Composer dependencies
+      run: composer install
+
+    - name: Run PHPStan
+      run: vendor/bin/phpstan analyze -c phpstan.neon  # You may need to adjust the configuration file name
+
