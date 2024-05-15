@@ -1,7 +1,0 @@
-# Change this to true if you want it to send a message to your discord. 
-
-webhook: false
-
-# Place your webhook url 
-
-webhook_url: ""
