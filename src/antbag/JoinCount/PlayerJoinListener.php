@@ -27,11 +27,11 @@ class PlayerJoinListener implements Listener {
   }
 
   private function loadData(): array {
-    $data = file_get_contents($this->dataFile);
-    return json_decode($data, true) ?? [];
     if (!file_exists($this->dataFile)) {
       return [];
     }
+    $data = file_get_contents($this->dataFile);
+    return json_decode($data, true) ?? [];
   }
 
   private function saveData(array $data) {
