@@ -9,6 +9,5 @@ class Main extends PluginBase {
     $config = $this->getConfig()->getAll();
     $listener = new PlayerJoinListener($this->getDataFolder() . "playerData.json", $config, $this->getLogger());
     $this->getServer()->getPluginManager()->registerEvents($listener, $this);
-    $this->getLogger()->info("Plugin enabled successfully.");
   }
 }
