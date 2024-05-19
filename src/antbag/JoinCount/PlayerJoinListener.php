@@ -41,6 +41,10 @@ class PlayerJoinListener implements Listener {
   }
   
   private function sendBroadcast(string $message) {
-    Server::getInstance()->broadcastMessage($message);
+    $this->getLogger()->info($message);
+  }
+  
+  private function getLogger() {
+    return Server::getInstance()->getLogger();
   }
 }
