@@ -5,13 +5,16 @@ namespace antbag\JoinCount;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\Server;
+use pocketmine\utils\Config;
 
 class PlayerJoinListener implements Listener {
 
   private $dataFile;
+  private $config;
 
-  public function __construct(string $dataFilePath) {
+  public function __construct(string $dataFilePath, Config $config) {
     $this->dataFile = $dataFilePath;
+    $this->config = $config;
   }
 
   public function onPlayerJoin(PlayerJoinEvent $event) {
@@ -22,7 +25,9 @@ class PlayerJoinListener implements Listener {
       $data[$playerName] = true; 
       $this->saveData($data); 
       $totalPlayers = count($data);
-      Server::getInstance()->broadcastMessage("§8Welcome,§c $playerName! §8You are the #§8 $totalPlayers §8player to join our server!");
+      $message = str_replace("{player}", $playerName, $this->config->get("messages.join"));
+      $message = str_replace("{number}", $totalPlayers, $message);
+      Server::getInstance()->broadcastMessage($message);
     }
   }
 
