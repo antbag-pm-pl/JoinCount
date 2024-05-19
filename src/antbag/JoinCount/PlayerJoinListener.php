@@ -23,7 +23,7 @@ class PlayerJoinListener implements Listener {
       $this->saveData($data); 
       $totalPlayers = count($data);
       $message = str_replace(["{player}", "{count}"], [$playerName, $totalPlayers], $this->welcomeMessage);
-      Server::getInstance()->broadcastMessage($message);
+      $this->sendBroadcast($message);
     }
   }
 
@@ -38,5 +38,9 @@ class PlayerJoinListener implements Listener {
   private function saveData(array $data) {
     $encodedData = json_encode($data);
     file_put_contents($this->dataFile, $encodedData);
+  }
+  
+  private function sendBroadcast(string $message) {
+    Server::getInstance()->broadcastMessage($message);
   }
 }
