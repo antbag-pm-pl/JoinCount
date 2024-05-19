@@ -41,7 +41,6 @@ class PlayerJoinListener implements Listener {
   }
   
   private function sendBroadcast(string $message) {
-    $this->getLogger()->info($message);
   }
   
   private function getLogger() {
