@@ -7,6 +7,7 @@ use pocketmine\utils\Config;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\permission\Permission;
+use pocketmine\permission\PermissionManager;
 
 class Main extends PluginBase {
 
@@ -20,9 +21,9 @@ class Main extends PluginBase {
     $this->listener = new PlayerJoinListener($this->getDataFolder() . "playerData.json", $this->config);
     $this->getServer()->getPluginManager()->registerEvents($this->listener, $this);
 
-    // add permission
+    // Add permission
     $perm = new Permission("joincount.totalplayers", "Allows the user to see the total number of players");
-    $this->getServer()->getPluginManager()->addPermission($perm);
+    PermissionManager::getInstance()->addPermission($perm);
   }
 
   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
