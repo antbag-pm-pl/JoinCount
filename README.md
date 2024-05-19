@@ -12,3 +12,4 @@ Just put this file in your plugin directory and restart your server. Now whenver
 
 # Support
 For any kind of issue/suggestion! Open a issue on GitHub
+Discord: https://discord.gg/n7MJz2pPgE
