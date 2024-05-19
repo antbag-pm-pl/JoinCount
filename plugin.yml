@@ -9,5 +9,5 @@ commands:
     permission: joincount.totalplayers
 permissions:
   joincount.totalplayers:
-    description: It allows the user to see the total number of players 
+    description: It allows the user to see the total number of players. 
     default: true
