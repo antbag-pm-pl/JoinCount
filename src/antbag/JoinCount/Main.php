@@ -21,13 +21,12 @@ class Main extends PluginBase {
     $this->listener = new PlayerJoinListener($this->getDataFolder() . "playerData.json", $this->config);
     $this->getServer()->getPluginManager()->registerEvents($this->listener, $this);
 
-    // Dodanie uprawnienia
     $perm = new Permission("joincount.totalplayers", "Allows the user to see the total number of players");
     PermissionManager::getInstance()->addPermission($perm);
   }
 
   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
-    if ($command->getName() === "totalplayers") {
+    if ($command->getName() === "registeredplayers") {
       if($sender->hasPermission("joincount.totalplayers")) {
         $totalPlayers = count($this->listener->loadData());
         $sender->sendMessage("Total players registered: " . $totalPlayers);
