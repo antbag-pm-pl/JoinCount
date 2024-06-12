@@ -3,3 +3,11 @@ version: 2.1.0
 api: 5.0.0
 author: antbag
 main: antbag\JoinCount\Main
+commands:
+  totalplayers:
+    description: Shows the total number of players 
+    permission: joincount.totalplayers
+permissions:
+  joincount.totalplayers:
+    description: It allows the user to see the total number of players. 
+    default: OP

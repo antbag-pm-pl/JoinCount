@@ -31,7 +31,7 @@ class PlayerJoinListener implements Listener {
     }
   }
 
-  private function loadData(): array {
+  public function loadData(): array {
     if (!file_exists($this->dataFile)) {
       return [];
     }
