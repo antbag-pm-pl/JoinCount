@@ -39,7 +39,7 @@ class PlayerJoinListener implements Listener {
     return json_decode($data, true) ?? [];
   }
 
-  private function saveData(array $data) {
+  public function saveData(array $data) {
     $encodedData = json_encode($data);
     file_put_contents($this->dataFile, $encodedData);
   }
